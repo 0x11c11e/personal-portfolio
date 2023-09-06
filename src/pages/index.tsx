@@ -1,9 +1,9 @@
-import dynamic from 'next/dynamic';
 import { Icon } from '@iconify/react';
+import dynamic from 'next/dynamic';
 
 import { Animate, Button, Pill } from '~/components';
-import { EventType, NavigationItemType } from '~/types';
 import { Layout } from '~/layouts';
+import { EventType, NavigationItemType } from '~/types';
 
 import type { EventProps } from '~/components/Event.component';
 import type { NavigationItem } from '~/types';
@@ -18,22 +18,24 @@ const Event = dynamic<EventProps>(
 const ACTIONS: Array<NavigationItem> = [
 	{
 		type: NavigationItemType.LINK,
-		href: '/blog',
-		icon: <Icon className="mr-3" icon="feather:edit-3" />,
-		text: 'Blog',
-	},
-	{
-		type: NavigationItemType.LINK,
-		href: '/projects',
-		icon: <Icon className="mr-3" icon="feather:copy" />,
-		text: 'Projects',
+		external: true,
+		href: 'https://github.com/0x11c11e/',
+		icon: <Icon className="mr-3" icon="feather:github" />,
+		text: 'GitHub',
 	},
 	{
 		type: NavigationItemType.LINK,
 		external: true,
-		href: 'https://github.com/nurodev',
-		icon: <Icon className="mr-3" icon="feather:github" />,
-		text: 'GitHub',
+		href: 'https://instagram.com/iman.rei',
+		icon: <Icon className="mr-3" icon="feather:instagram" />,
+		text: 'Instagram',
+	},
+	{
+		type: NavigationItemType.LINK,
+		external: true,
+		href: 'https://www.facebook.com/iman.rei',
+		icon: <Icon className="mr-3" icon="feather:facebook" />,
+		text: 'Facebook',
 	},
 ];
 
@@ -43,7 +45,7 @@ export default function HomePage(): JSX.Element {
 	const isBirthday =
 		today.getDate() === birthday.getDate() && today.getMonth() === birthday.getMonth();
 
-	const description = `I am a software engineer & games developer`;
+	const description = `I am a software engineer & researcher`;
 
 	return (
 		<Layout.Default>
@@ -58,8 +60,8 @@ export default function HomePage(): JSX.Element {
 						}}
 						className="text-gray-500 dark:text-white text-5xl sm:text-6xl md:text-6xl lg:text-8xl tracking-tight font-extrabold">
 						Hey <span className="inline-block origin-70 hover:(animate-wave)">👋</span>{' '}
-						I&apos;m Ben, <br className="hidden sm:block" />a{' '}
-						<Pill.Standard className="mt-4">developer</Pill.Standard>
+						I&apos;m Iman, <br className="hidden sm:block" />a{' '}
+						<Pill.Standard className="mt-4">Programmer</Pill.Standard>
 					</Animate>
 
 					<Animate
